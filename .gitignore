@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+
+# Design files (Frontend Mentor asks us not to upload these)
+*.fig
+*.sketch
+*.xd
+
+# IDE
+.idea/
+
+# Claude Code local settings
+.claude/
+
+# Future JS/React platform dependencies
+node_modules/
+dist/
+.env
