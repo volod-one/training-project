@@ -26,6 +26,15 @@ reviews:
         Google Fonts use async loading (media=print swap), BEM class names match html-css,
         no inline styles, no business logic in presentational components.
 
+    - path: "**/react-tailwind/**"
+      instructions: >
+        Tailwind v4 utility-class implementation. No stylelint, no BEM class names — this is
+        intentional. Compare JSX structure against the react-css variant in the same challenge
+        folder. Verify: #root has display:contents in index.css, Google Fonts use async loading
+        (media=print swap), custom color tokens are defined in @theme and used via Tailwind
+        classes (not hardcoded), no business logic in presentational components.
+        Arbitrary values (e.g. rounded-[20px]) are expected for Figma-exact measurements.
+
     - path: "**/*.css"
       instructions: >
         Enforce BEM naming (.block, .block__element, .block--modifier).
