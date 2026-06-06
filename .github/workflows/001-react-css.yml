@@ -4,9 +4,13 @@ on:
   push:
     paths:
       - '001-qr-code-component/react-css/**'
+      - '!001-qr-code-component/react-css/**/*.md'
+      - '.github/workflows/001-react-css.yml'
   pull_request:
     paths:
       - '001-qr-code-component/react-css/**'
+      - '!001-qr-code-component/react-css/**/*.md'
+      - '.github/workflows/001-react-css.yml'
   workflow_dispatch:
     inputs:
       update_snapshots:

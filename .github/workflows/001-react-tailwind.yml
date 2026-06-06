@@ -4,9 +4,13 @@ on:
   push:
     paths:
       - '001-qr-code-component/react-tailwind/**'
+      - '!001-qr-code-component/react-tailwind/**/*.md'
+      - '.github/workflows/001-react-tailwind.yml'
   pull_request:
     paths:
       - '001-qr-code-component/react-tailwind/**'
+      - '!001-qr-code-component/react-tailwind/**/*.md'
+      - '.github/workflows/001-react-tailwind.yml'
   workflow_dispatch:
     inputs:
       update_snapshots:
