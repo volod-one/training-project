@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  snapshotPathTemplate: '{testDir}/snapshots/{testName}/{arg}{ext}',
+  snapshotPathTemplate: '{testDir}/snapshots/{platform}/{testName}/{arg}{ext}',
   webServer: {
     command: 'npx serve .. --listen 3000 --no-clipboard',
     port: 3000,
