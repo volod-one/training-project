@@ -16,23 +16,34 @@ Open `index.html` directly in a browser. No build tools, no server needed.
 open 001-qr-code-component/html-css/index.html
 ```
 
+## Linting
+
+```bash
+npm run validate:html   # html-validate — catches invalid markup browsers silently fix
+npm run lint:css        # stylelint — enforces modern CSS syntax and consistent style
+```
+
 ## Testing
 
 Visual regression with Playwright — compares screenshots against committed baselines.
 
 ```bash
-npm install                      # first time only
-npx playwright install chromium  # first time only — downloads the browser binary
-npm test                         # run tests against baseline (fails if pixels changed)
-npm run test:update              # re-take screenshots and update baselines (after intentional design changes)
+npm install                                        # first time only
+npx playwright install chromium firefox webkit     # first time only — downloads browser binaries
+npm test                                           # run tests against baseline (fails if pixels changed)
+npm run test:update                                # re-take screenshots and update baselines
 ```
 
-Baselines are committed per OS in `tests/snapshots/{platform}/` — desktop (1440px) and mobile (375px).
+Baselines are committed per OS and per browser in `tests/snapshots/{platform}/{browser}/` — desktop (1440px) and mobile (375px).
 Each OS keeps its own baselines because font rendering differs between macOS, Linux, and Windows.
 
 ## CI
 
-GitHub Actions runs these tests automatically on every push or PR that touches this folder.
+Two jobs run automatically on every push or PR that touches this folder:
+
+- **lint** — runs `validate:html` and `lint:css`
+- **test** — runs visual regression across Chromium, Firefox, and WebKit
+
 Workflow: [`.github/workflows/001-html-css.yml`](../../../.github/workflows/001-html-css.yml)
 
 To generate Linux baselines after the repo is on GitHub: go to Actions → "001 QR Code — HTML+CSS" → Run workflow → check "Regenerate and commit Linux baseline snapshots".
