@@ -53,7 +53,7 @@ Compares screenshots against committed baselines across Chromium, Firefox, and W
 
 ## CI
 
-Three checks run automatically on every push or PR that touches this folder:
+Two checks run automatically on every push or PR that touches this folder:
 
 - **lint** — runs `lint:js`, `lint:css`, and `test:unit`
 - **test** — builds the app and runs visual regression across all three browsers

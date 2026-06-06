@@ -4,7 +4,7 @@ function QrCard() {
   return (
     <article className="card">
       <img
-        src="/images/image-qr-code.png"
+        src={`${import.meta.env.BASE_URL}images/image-qr-code.png`}
         alt="QR code to visit Frontend Mentor"
         className="card__image"
       />

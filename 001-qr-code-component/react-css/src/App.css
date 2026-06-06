@@ -18,17 +18,17 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: hsl(212deg 45% 89%);
+  background-color: hsl(212deg 45% 89%); /* Slate 300 */
   font-family: Outfit, sans-serif;
   font-size: 15px;
 }
 
 /* Attribution */
 .attribution {
-  font-size: 0.6875rem;
+  font-size: 0.6875rem; /* 11px — smaller than 15px body copy for supplementary text */
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228deg 45% 44%);
+  color: hsl(228deg 45% 44%); /* intentional — higher contrast than Slate 500 for attribution links */
 }
