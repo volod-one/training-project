@@ -29,6 +29,7 @@ body {
 
 .card__image {
   width: 100%;
+  aspect-ratio: 1;
   border-radius: 10px;
   display: block; /* removes inline gap below img */
 }
