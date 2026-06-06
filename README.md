@@ -22,7 +22,7 @@ FrontendMentor/
     └── …
 ```
 
-Platform folder slugs: `android-compose`, `swiftui`, `flutter`, `react`, `react-css`, `react-tailwind`, `react-native`, `html-css`
+Platform folder slugs: `android-compose`, `swiftui`, `flutter`, `react`, `react-css`, `react-tailwind`, `react-native`, `html-css`, `vue-css`
 
 Not every challenge has every platform — folders are added only when that port is done.
 
@@ -67,7 +67,7 @@ the visual test job will fail on the first push. Fix it before merging:
 
 ## Deployment
 
-HTML+CSS, React+CSS, and React+Tailwind implementations are auto-deployed to GitHub Pages on push to `main`.
+HTML+CSS, React+CSS, React+Tailwind, and Vue+CSS implementations are auto-deployed to GitHub Pages on push to `main`.
 Each challenge lives at its own subpath — no config needed when adding new challenges.
 
 Live site: `https://volod-one.github.io/training-project/`  
@@ -77,4 +77,4 @@ Enable in repo Settings → Pages → Source: **GitHub Actions**.
 
 | #   | Challenge                                     | Difficulty | Platforms done |
 |-----|-----------------------------------------------|------------|----------------|
-| 001 | [QR Code Component](./001-qr-code-component/) | Newbie     | HTML+CSS, React+CSS, React+Tailwind |
+| 001 | [QR Code Component](./001-qr-code-component/) | Newbie     | HTML+CSS, React+CSS, React+Tailwind, Vue+CSS |
