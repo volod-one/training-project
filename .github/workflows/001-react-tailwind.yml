@@ -1,14 +1,14 @@
-name: 001 QR Code — React+CSS
+name: 001 QR Code — React+Tailwind
 
 on:
   push:
     paths:
-      - '001-qr-code-component/react-css/**'
-      - '!001-qr-code-component/react-css/**/*.md'
+      - '001-qr-code-component/react-tailwind/**'
+      - '!001-qr-code-component/react-tailwind/**/*.md'
   pull_request:
     paths:
-      - '001-qr-code-component/react-css/**'
-      - '!001-qr-code-component/react-css/**/*.md'
+      - '001-qr-code-component/react-tailwind/**'
+      - '!001-qr-code-component/react-tailwind/**/*.md'
   workflow_dispatch:
     inputs:
       update_snapshots:
@@ -23,25 +23,22 @@ jobs:
       contents: read
     defaults:
       run:
-        working-directory: 001-qr-code-component/react-css
+        working-directory: 001-qr-code-component/react-tailwind
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version-file: '001-qr-code-component/react-css/.nvmrc'
+          node-version-file: '001-qr-code-component/react-tailwind/.nvmrc'
           cache: 'npm'
-          cache-dependency-path: '001-qr-code-component/react-css/package-lock.json'
+          cache-dependency-path: '001-qr-code-component/react-tailwind/package-lock.json'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Lint JS/TS
         run: npm run lint:js
-
-      - name: Lint CSS
-        run: npm run lint:css
 
       - name: Unit tests
         run: npm run test:unit
@@ -52,16 +49,16 @@ jobs:
       contents: write
     defaults:
       run:
-        working-directory: 001-qr-code-component/react-css
+        working-directory: 001-qr-code-component/react-tailwind
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version-file: '001-qr-code-component/react-css/.nvmrc'
+          node-version-file: '001-qr-code-component/react-tailwind/.nvmrc'
           cache: 'npm'
-          cache-dependency-path: '001-qr-code-component/react-css/package-lock.json'
+          cache-dependency-path: '001-qr-code-component/react-tailwind/package-lock.json'
 
       - name: Install dependencies
         run: npm ci
@@ -91,5 +88,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: 001-qr-code-component/react-css/test-results/
+          path: 001-qr-code-component/react-tailwind/test-results/
           retention-days: 7

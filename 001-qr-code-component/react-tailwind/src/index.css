@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-300: hsl(212deg 45% 89%);
+  --color-slate-500: hsl(216deg 15% 48%);
+  --color-slate-900: hsl(218deg 44% 22%);
+  --color-attribution-link: hsl(228deg 45% 44%); /* intentional — higher contrast than Slate 500 */
+  --font-outfit: 'Outfit', sans-serif;
+}
+
+/* Make React's root div transparent to body's flex layout */
+#root {
+  display: contents;
+}
+
+@layer base {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: theme(--color-slate-300);
+    font-family: theme(--font-outfit);
+    font-size: 0.9375rem; /* 15px — rem so it scales with user's browser font size */
+  }
+}

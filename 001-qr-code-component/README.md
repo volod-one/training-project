@@ -26,10 +26,11 @@ Figma file: [`assets/qr-code-component.fig`](./assets/qr-code-component.fig).
 
 ## Implementations
 
-| Platform        | Folder             | Status |
-|-----------------|--------------------|--------|
-| HTML + CSS      | `html-css/`        | ✓ done |
-| React + CSS     | `react-css/`       | ✓ done |
-| Jetpack Compose | `android-compose/` | —      |
-| SwiftUI         | `swiftui/`         | —      |
-| Flutter         | `flutter/`         | —      |
+| Platform        | Folder               | Status |
+|-----------------|----------------------|--------|
+| HTML + CSS      | `html-css/`          | ✓ done |
+| React + CSS     | `react-css/`         | ✓ done |
+| React + Tailwind| `react-tailwind/`    | ✓ done |
+| Jetpack Compose | `android-compose/`   | —      |
+| SwiftUI         | `swiftui/`           | —      |
+| Flutter         | `flutter/`           | —      |
