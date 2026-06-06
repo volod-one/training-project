@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test:update": "playwright test --update-snapshots"
+    "test:update": "playwright test --update-snapshots",
+    "validate:html": "html-validate index.html",
+    "lint:css": "stylelint style.css"
   },
   "engines": {
     "node": ">=20.18.0"
@@ -15,6 +17,9 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "serve": "^14.2.6"
+    "html-validate": "^10.0.0",
+    "serve": "^14.2.6",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1"
   }
 }
