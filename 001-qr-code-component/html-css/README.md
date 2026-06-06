@@ -1,5 +1,7 @@
 # QR Code Component — HTML + CSS
 
+[![CI](https://github.com/volod-one/frontend-mentor/actions/workflows/001-html-css.yml/badge.svg)](https://github.com/volod-one/frontend-mentor/actions/workflows/001-html-css.yml)
+
 ## Lighthouse scores
 
 | Performance | Accessibility | Best Practices | SEO |
