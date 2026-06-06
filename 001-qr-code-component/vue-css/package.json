@@ -1,0 +1,41 @@
+{
+  "name": "vue-css",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "lint:js": "eslint src",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "test:unit": "vitest run",
+    "test:visual": "playwright test",
+    "test:visual:update": "playwright test --update-snapshots"
+  },
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@playwright/test": "^1.60.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/vue": "^8.1.0",
+    "@types/node": "^25.9.2",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/test-utils": "^2.4.6",
+    "eslint": "^9.25.0",
+    "eslint-plugin-vue": "^9.33.0",
+    "globals": "^16.0.0",
+    "happy-dom": "^20.10.1",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.29.1",
+    "vite": "^6.3.5",
+    "vitest": "^4.1.8",
+    "vue-tsc": "^2.2.10"
+  }
+}
