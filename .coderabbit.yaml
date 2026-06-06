@@ -1,0 +1,53 @@
+language: "en-US"
+
+tone_instructions: >
+  This is an educational portfolio project. Prefer explanations over terse
+  corrections — when flagging an issue, briefly explain why it matters.
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  auto_review:
+    enabled: true
+    drafts: false
+  path_instructions:
+    - path: "**/html-css/**"
+      instructions: >
+        Reference implementation — treat as the gold standard for this challenge.
+        Flag any regressions in semantic HTML, BEM naming, or accessibility.
+
+    - path: "**/react-css/**"
+      instructions: >
+        Compare structure against the html-css reference in the same challenge folder.
+        Flag deviations not justified by React idioms. Verify: #root has display:contents,
+        Google Fonts use async loading (media=print swap), BEM class names match html-css,
+        no inline styles, no business logic in presentational components.
+
+    - path: "**/*.css"
+      instructions: >
+        Enforce BEM naming (.block, .block__element, .block--modifier).
+        Flag magic numbers — values should match style-guide.md in the challenge folder
+        or have a comment explaining the choice.
+
+    - path: "**/*.tsx"
+      instructions: >
+        Components should be small and single-purpose. No any types. Props must be typed.
+        Prefer explicit imports over namespace imports.
+
+    - path: "**/.github/workflows/**"
+      instructions: >
+        New platform workflows must mirror the structure of 001-html-css.yml:
+        separate lint and test jobs, path-scoped triggers, snapshot update dispatch input.
+        Verify working-directory and cache-dependency-path point to the correct platform folder.
+
+    - path: "**/tests/**"
+      instructions: >
+        Visual regression tests must cover desktop (1440×900) and mobile (375×812).
+        Unit tests should assert content and ARIA attributes, not implementation details
+        or CSS class names.
+
+chat:
+  auto_reply: true
