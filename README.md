@@ -21,7 +21,7 @@ FrontendMentor/
     └── …
 ```
 
-Platform folder slugs: `android-compose`, `swiftui`, `flutter`, `react`, `react-native`, `html-css`
+Platform folder slugs: `android-compose`, `swiftui`, `flutter`, `react`, `react-css`, `react-native`, `html-css`
 
 Not every challenge has every platform — folders are added only when that port is done.
 
