@@ -35,6 +35,15 @@ reviews:
         classes (not hardcoded), no business logic in presentational components.
         Arbitrary values (e.g. rounded-[20px]) are expected for Figma-exact measurements.
 
+    - path: "**/vue-css/**"
+      instructions: >
+        Vue 3 SFC implementation with scoped styles. Compare template structure against the
+        html-css reference in the same challenge folder. Verify: #app has display:contents in
+        app.css, Google Fonts use async loading (media=print swap), BEM class names in
+        <style scoped> match the html-css variant, image src uses import.meta.env.BASE_URL for
+        GitHub Pages compatibility, no business logic in presentational components.
+        <style scoped> is intentional — do not suggest CSS Modules or external CSS files.
+
     - path: "**/*.css"
       instructions: >
         Enforce BEM naming (.block, .block__element, .block--modifier).
@@ -48,6 +57,12 @@ reviews:
       instructions: >
         Components should be small and single-purpose. No any types. Props must be typed.
         Prefer explicit imports over namespace imports.
+
+    - path: "**/*.vue"
+      instructions: >
+        Vue SFCs should be small and single-purpose. Use <script setup lang="ts">.
+        No any types. Props must be typed with defineProps. Prefer explicit imports.
+        Scoped styles live in <style scoped> — no separate CSS files for component styles.
 
     - path: "**/.github/workflows/**"
       instructions: >
