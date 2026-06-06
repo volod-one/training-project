@@ -1,6 +1,6 @@
 # QR Code Component — HTML + CSS
 
-[![CI](https://github.com/volod-one/frontend-mentor/actions/workflows/001-html-css.yml/badge.svg)](https://github.com/volod-one/frontend-mentor/actions/workflows/001-html-css.yml)
+[![CI](https://github.com/volod-one/training-project/actions/workflows/001-html-css.yml/badge.svg)](https://github.com/volod-one/training-project/actions/workflows/001-html-css.yml)
 
 ## Lighthouse scores
 
@@ -51,7 +51,7 @@ To generate Linux baselines after the repo is on GitHub: go to Actions → "001 
 ## Live URL
 
 Deployed automatically to GitHub Pages on every push to `main`:
-`https://<username>.github.io/<repo>/001-qr-code-component/html-css/`
+`https://volod-one.github.io/training-project/001-qr-code-component/html-css/`
 
 ## Key learnings
 

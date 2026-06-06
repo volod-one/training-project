@@ -51,7 +51,7 @@ Work in progress stays off the live site until the PR is merged.
 HTML+CSS implementations are auto-deployed to GitHub Pages on push to `main`.
 Each challenge lives at its own subpath — no config needed when adding new challenges.
 
-Live site: `https://<username>.github.io/<repo>/`  
+Live site: `https://volod-one.github.io/training-project/`  
 Enable in repo Settings → Pages → Source: **GitHub Actions**.
 
 ## Challenges
