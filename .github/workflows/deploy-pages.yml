@@ -29,23 +29,41 @@ jobs:
 
       - name: Build Pages artifact
         run: |
-          set -euxo pipefail
           mkdir -p _site
-          echo "Repo root contents:"
-          ls -la
+
+          # collect challenge links for the index page
+          links=""
           for challenge_dir in [0-9]*/; do
             challenge="${challenge_dir%/}"
-            echo "Processing: $challenge"
             if [ -d "$challenge/html-css" ]; then
               mkdir -p "_site/$challenge"
               cp -r "$challenge/html-css" "_site/$challenge/html-css"
               if [ -d "$challenge/assets" ]; then
                 cp -r "$challenge/assets" "_site/$challenge/assets"
               fi
+              links="$links<li><a href=\"$challenge/html-css/\">$challenge — HTML+CSS</a></li>"
             fi
           done
-          echo "Site contents:"
-          find _site -type f
+
+          # generate root index
+          cat > _site/index.html <<HTML
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Frontend Mentor Challenges</title>
+            <style>
+              body { font-family: sans-serif; max-width: 600px; margin: 4rem auto; padding: 0 1rem; }
+              ul { line-height: 2; }
+            </style>
+          </head>
+          <body>
+            <h1>Frontend Mentor Challenges</h1>
+            <ul>$links</ul>
+          </body>
+          </html>
+          HTML
 
       - uses: actions/configure-pages@v4
 
