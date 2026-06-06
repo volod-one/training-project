@@ -28,8 +28,8 @@ Figma file: [`assets/qr-code-component.fig`](./assets/qr-code-component.fig).
 
 | Platform        | Folder             | Status |
 |-----------------|--------------------|--------|
+| HTML + CSS      | `html-css/`        | ✓ done |
 | Jetpack Compose | `android-compose/` | —      |
-| HTML + CSS      | `html-css/`        | —      |
 | SwiftUI         | `swiftui/`         | —      |
 | Flutter         | `flutter/`         | —      |
 | React           | `react/`           | —      |
