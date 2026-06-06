@@ -6,6 +6,7 @@ on:
     paths:
       - 'index.html'
       - '*/html-css/**'
+      - '*/react-css/**'
       - '*/assets/**'
   workflow_dispatch:
 
@@ -28,6 +29,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Build Pages artifact
         run: |
           mkdir -p _site
@@ -40,6 +45,14 @@ jobs:
               if [ -d "$challenge/assets" ]; then
                 cp -r "$challenge/assets" "_site/$challenge/assets"
               fi
+            fi
+            if [ -d "$challenge/react-css" ]; then
+              mkdir -p "_site/$challenge"
+              cd "$challenge/react-css"
+              npm ci --prefer-offline
+              VITE_BASE_URL="/training-project/$challenge/react-css/" npm run build
+              cp -r dist "../../_site/$challenge/react-css"
+              cd ../..
             fi
           done
 

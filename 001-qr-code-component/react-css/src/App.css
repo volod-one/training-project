@@ -1,0 +1,34 @@
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make React's root div transparent to body's flex layout */
+#root {
+  display: contents;
+}
+
+/* Full-page centering */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(212deg 45% 89%); /* Slate 300 */
+  font-family: Outfit, sans-serif;
+  font-size: 15px;
+}
+
+/* Attribution */
+.attribution {
+  font-size: 0.6875rem; /* 11px — smaller than 15px body copy for supplementary text */
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg 45% 44%); /* intentional — higher contrast than Slate 500 for attribution links */
+}

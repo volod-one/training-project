@@ -14,14 +14,14 @@ FrontendMentor/
 │   ├── assets/                ← shared images and design mockups
 │   ├── android-compose/       ← Jetpack Compose implementation
 │   ├── html-css/              ← HTML + CSS implementation
+│   ├── react-css/             ← React + CSS implementation
 │   ├── swiftui/
-│   ├── flutter/
-│   └── react/
+│   └── flutter/
 └── 002-next-challenge/
     └── …
 ```
 
-Platform folder slugs: `android-compose`, `swiftui`, `flutter`, `react`, `react-native`, `html-css`
+Platform folder slugs: `android-compose`, `swiftui`, `flutter`, `react`, `react-css`, `react-native`, `html-css`
 
 Not every challenge has every platform — folders are added only when that port is done.
 
@@ -35,7 +35,7 @@ Branch naming: `<challenge-number>/<platform>`
 
 ```
 001/html-css
-001/react
+001/react-css
 002/html-css
 ```
 
@@ -48,7 +48,7 @@ Work in progress stays off the live site until the PR is merged.
 
 ## Deployment
 
-HTML+CSS implementations are auto-deployed to GitHub Pages on push to `main`.
+HTML+CSS and React+CSS implementations are auto-deployed to GitHub Pages on push to `main`.
 Each challenge lives at its own subpath — no config needed when adding new challenges.
 
 Live site: `https://volod-one.github.io/training-project/`  
@@ -58,4 +58,4 @@ Enable in repo Settings → Pages → Source: **GitHub Actions**.
 
 | #   | Challenge                                     | Difficulty | Platforms done |
 |-----|-----------------------------------------------|------------|----------------|
-| 001 | [QR Code Component](./001-qr-code-component/) | Newbie     | HTML+CSS       |
+| 001 | [QR Code Component](./001-qr-code-component/) | Newbie     | HTML+CSS, React+CSS |
