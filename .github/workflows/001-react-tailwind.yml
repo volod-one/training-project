@@ -17,6 +17,8 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     defaults:
       run:
         working-directory: 001-qr-code-component/react-tailwind

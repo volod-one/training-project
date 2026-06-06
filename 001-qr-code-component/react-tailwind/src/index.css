@@ -23,6 +23,6 @@
     gap: 1rem;
     background-color: theme(--color-slate-300);
     font-family: theme(--font-outfit);
-    font-size: 15px;
+    font-size: 0.9375rem; /* 15px — rem so it scales with user's browser font size */
   }
 }
