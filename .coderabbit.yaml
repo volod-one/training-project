@@ -31,6 +31,9 @@ reviews:
         Enforce BEM naming (.block, .block__element, .block--modifier).
         Flag magic numbers — values should match style-guide.md in the challenge folder
         or have a comment explaining the choice.
+        The project uses modern CSS color function notation enforced by stylelint-config-standard:
+        space-separated with the deg keyword (e.g. hsl(212deg 45% 89%)), not the legacy
+        comma-separated form (hsl(212, 45%, 89%)). Do not suggest comma-separated HSL format.
 
     - path: "**/*.tsx"
       instructions: >
@@ -42,6 +45,9 @@ reviews:
         New platform workflows must mirror the structure of 001-html-css.yml:
         separate lint and test jobs, path-scoped triggers, snapshot update dispatch input.
         Verify working-directory and cache-dependency-path point to the correct platform folder.
+        SHA pinning for action versions (actions/checkout, actions/setup-node, etc.) is
+        intentionally skipped — this is an educational portfolio project, not a production system.
+        Do not flag unpinned @v* action tags.
 
     - path: "**/tests/**"
       instructions: >
