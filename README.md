@@ -27,6 +27,14 @@ Not every challenge has every platform — folders are added only when that port
 
 Each platform folder that has tests includes a `package.json` with `npm test` (Playwright visual regression).
 
+## Deployment
+
+HTML+CSS implementations are auto-deployed to GitHub Pages on push to `main`.
+Each challenge lives at its own subpath — no config needed when adding new challenges.
+
+Live site: `https://<username>.github.io/<repo>/`  
+Enable in repo Settings → Pages → Source: **GitHub Actions**.
+
 ## Challenges
 
 | #   | Challenge                                     | Difficulty | Platforms done |

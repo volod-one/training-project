@@ -35,6 +35,11 @@ Workflow: [`.github/workflows/001-html-css.yml`](../../../.github/workflows/001-
 
 To generate Linux baselines after the repo is on GitHub: go to Actions → "001 QR Code — HTML+CSS" → Run workflow → check "Regenerate and commit Linux baseline snapshots".
 
+## Live URL
+
+Deployed automatically to GitHub Pages on every push to `main`:
+`https://<username>.github.io/<repo>/001-qr-code-component/html-css/`
+
 ## Key learnings
 
 **CSS reset** — `box-sizing: border-box` makes padding subtract from width instead of adding to it (avoids surprise overflow). Zeroing `margin`/`padding` eliminates browser defaults that vary across browsers.
