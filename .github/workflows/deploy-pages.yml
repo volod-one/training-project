@@ -29,9 +29,13 @@ jobs:
 
       - name: Build Pages artifact
         run: |
+          set -euxo pipefail
           mkdir -p _site
-          for challenge_dir in */; do
+          echo "Repo root contents:"
+          ls -la
+          for challenge_dir in [0-9]*/; do
             challenge="${challenge_dir%/}"
+            echo "Processing: $challenge"
             if [ -d "$challenge/html-css" ]; then
               mkdir -p "_site/$challenge"
               cp -r "$challenge/html-css" "_site/$challenge/html-css"
@@ -40,6 +44,8 @@ jobs:
               fi
             fi
           done
+          echo "Site contents:"
+          find _site -type f
 
       - uses: actions/configure-pages@v4
 
