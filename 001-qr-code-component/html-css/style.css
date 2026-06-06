@@ -13,14 +13,14 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: hsl(212, 45%, 89%);
-  font-family: 'Outfit', sans-serif;
+  background-color: hsl(212deg 45% 89%);
+  font-family: Outfit, sans-serif;
   font-size: 15px;
 }
 
 /* Card */
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg 0% 100%);
   border-radius: 20px;
   padding: 16px;
   max-width: 320px;
@@ -46,14 +46,14 @@ body {
   font-size: 1.375rem;
   font-weight: 700;
   line-height: 1.2;
-  color: hsl(218, 44%, 22%);
+  color: hsl(218deg 44% 22%);
 }
 
 .card__text {
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.5;
-  color: hsl(216, 15%, 48%);
+  color: hsl(216deg 15% 48%);
 }
 
 /* Attribution */
@@ -63,5 +63,5 @@ body {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(228deg 45% 44%);
 }
