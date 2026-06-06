@@ -1,0 +1,17 @@
+{
+  "name": "html-css",
+  "version": "1.0.0",
+  "description": "## How to run",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:update": "playwright test --update-snapshots"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "serve": "^14.2.6"
+  }
+}

@@ -12,7 +12,11 @@
 # Claude Code local settings
 .claude/
 
-# Future JS/React platform dependencies
+# JS/React platform dependencies and build output
 node_modules/
 dist/
 .env
+
+# Playwright
+playwright-report/
+test-results/
